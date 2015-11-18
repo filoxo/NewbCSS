@@ -1,5 +1,5 @@
 {
-  "name": "mikecss",
+  "name": "newbcss",
   "version": "1.0.0",
   "description": "An attempt to create an extremely lightweight but flexible CSS framework. ",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "devDependencies": {
     "express": "^4.13.3",
     "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "jade": "^1.11.0",
     "node-sass": "^3.4.2"
