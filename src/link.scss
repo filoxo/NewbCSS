@@ -1,0 +1,19 @@
+a, .link {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background-color:transparent;
+  border:none;
+  color:lighten($blue, 10);
+  cursor:pointer;
+  padding:0;
+  text-decoration:none;
+  &:hover{
+    color:lighten($blue, 25);
+    text-decoration:underline;
+  }
+  &:active {
+    color:$blue;
+  }
+}
+p .link { text-decoration:underline; }

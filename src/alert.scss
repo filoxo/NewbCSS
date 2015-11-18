@@ -1,0 +1,35 @@
+
+@mixin alert-color($color, $textcolor:$light){
+  color:$color;
+  border:3px solid $color;
+  &.solid{
+    color:$textcolor;
+    background-color:$color;
+  }
+}
+.alert {
+  background-color:$transparent;
+  @include alert-color($dark);
+  border-radius:$border-radius;
+  display:block;
+  margin:3px;
+  padding: 10px 20px;
+  &.slim {
+    padding:3px 20px;
+  }
+  &.red {
+    @include alert-color($red);
+  }
+  &.blue {
+    @include alert-color($blue);
+  }
+  &.green {
+    @include alert-color($green);
+  }
+  &.yellow {
+    @include alert-color($yellow);
+  }
+  &.white {
+    @include alert-color($white, $base);
+  }
+}

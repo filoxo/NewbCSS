@@ -1,0 +1,99 @@
+html
+  head
+    title="Newb CSS"
+    link(rel="stylesheet", href="/newb.css")
+  body.page
+    h1 Welcome to NewbCSS
+    p Intro and description
+    h2 Philosophies
+    .container
+      h4 Accessibility
+      p.
+        I'm experimenting with and learning about Accessibility. I've left things like the #[code outline] styles for
+        good reasons. I'll try to improve where I can.
+    h2#buttons Buttons
+    .container
+      h3 #[code .btn]s
+      button.btn DEFAULT
+      button.btn.blue BLUE
+      button.btn.red RED
+      button.btn.grey GREY
+      button.btn.orange ORANGE
+      button.btn.yellow YELLOW
+      button.btn.pink PINK
+      a.btn.blue BLUE LINK
+    .container
+      h3 #[code .dark.btn]s
+      .container.bg.dark
+        button.btn.dark.white WHITE
+        button.btn.dark.blue BLUE
+        button.btn.dark.red RED
+        button.btn.dark.grey GREY
+        button.btn.dark.orange ORANGE
+        button.btn.dark.yellow YELLOW
+        button.btn.dark.pink PINK
+    .container
+      h3 #[code .round.btn]s
+      button.btn.round ROUND
+      a(href="#").btn.round.blue ROUND BLUE ANCHOR
+    .container
+      h3 #[code .btn] sizes
+      button.btn.sm .btn.sm
+      button.btn DEFAULT
+      button.btn.lg .btn.lg
+      button.btn.xlg .btn.xlg
+      p.
+        Looking for a smaller button? That might be too small to be tapable...
+        But if you're just going for the look, check out #[a(href="#badge") Badges].
+    h2#links Links
+    .container
+      p: a(href="#") Anchor
+      button.link Button as a link
+      p Links inside text will be #[a.link underlined] so that they sound out.
+    h2#alerts Alerts
+    .container
+      h3 #[code .alert]s
+      .alert They are transparent by default.
+      .alert.green They should be used to provide information. Green may or may not be equated with success messages.
+      .alert.blue.slim: p Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
+      .alert.yellow Yellow is usually used for issues that do not require immediate action.
+      .alert.red Red can be the most 'serious' of alerts.
+      .container.bg.dark
+        .alert.white Neutral info. Like something about how about cookies are used for your website...
+      h3 #[code .solid.alert]
+      .alert.solid Lorem ipsum something.
+      .alert.green.solid Good job! You did something!
+      .alert.blue.solid Just so you know, something happened but it's whatevs.
+      .alert.yellow.solid Uh-oh, something might be happening.
+      .alert.red.solid Attention: something definitely happened.
+      .container.bg.dark
+        .alert.white.solid To alert or not to alert? That is the question.
+      h3 #[code .alert] with #[code .bg]
+      .alert.blue.bg.light "HEY! Listen!" ~ Navi, Legend of Zelda
+      .alert.yellow.bg.dark "HYYAAAAAAHHHHH!" ~ Link, Legend of Zelda
+      h3 #[code .slim.alert]
+      .alert.blue.slim Maybe not? It looks like a really long button that doesn't do anything on hover...
+    h2 Forms
+    .container
+       h3 Input
+       p: input
+       h3 Text area
+       p: textarea
+    h2 TODO
+    .container
+      ul
+        li Form radios, checkboxes, selects, labels
+        li Lists
+        li Badges
+        li Tags
+        li Text helper classes
+        li Grid system!?!?
+        li Nav bar... yikes.
+        li image classes
+        li Tables?
+        li Add icons (probably fontawesome)
+        li Javascript for
+          ul
+            li dismissible alerts
+            li modals
+

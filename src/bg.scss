@@ -1,0 +1,9 @@
+@mixin background($bgcolor, $textcolor:$base){
+  color:$textcolor;
+  background-color:$bgcolor;
+}
+.bg {
+  // REMEMBER: bg by itself does nothing!
+  &.light { @include background($white); }
+  &.dark { @include background($dark, $light) }
+}

@@ -1,0 +1,60 @@
+// Base button
+@mixin button($color, $hover:$light) {
+  border:3px solid $color;
+  color:$color;
+  &:hover {
+    background-color:$color;
+    color:$hover;
+    text-decoration:none;
+  }
+}
+.btn {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background-color:$transparent;
+  border-radius:$border-radius;
+  display:inline-block;
+  margin:3px;
+  padding:6px;
+  transition:background-color $btn-transition,color $btn-transition;
+  @include button($base);
+
+  // Button sizes
+  &.sm {
+    padding:2px;
+    font-size: .8em;
+  }
+  &.lg {
+    padding:10px;
+    font-size:1.2em;
+  }
+  &.xlg {
+    padding:14px;
+    font-size: 1.5em;
+  }
+  // Button round
+  &.round {
+    border-radius:25px;
+  }
+
+  // Color buttons
+  &.blue { @include button($blue) }
+  &.red { @include button($red) }
+  &.grey { @include button($grey) }
+  &.green { @include button($green) }
+  &.orange { @include button($orange) }
+  &.yellow { @include button($yellow) }
+  &.pink { @include button($pink) }
+  &.white { @include button($light) }
+
+  // Color buttons - dark
+  &.dark.white { @include button($light, $base) }
+  &.dark.blue { @include button($blue, $base) }
+  &.dark.red { @include button($red, $base) }
+  &.dark.grey { @include button($grey, $base) }
+  &.dark.green { @include button($green, $base) }
+  &.dark.orange { @include button($orange, $base) }
+  &.dark.yellow { @include button($yellow, $base) }
+  &.dark.pink { @include button($pink, $base) }
+}
