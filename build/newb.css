@@ -391,6 +391,15 @@ p {
   margin: 3px;
   padding: 10px 15px; }
 
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
 .bg.light {
   color: #202020;
   background-color: #fff; }
@@ -602,8 +611,280 @@ p .link {
       color: #202020;
       background-color: #fff; }
 
-input, textarea {
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(59, 153, 252, 0.75); }
+
+input, textarea, select {
   border: 1.5px solid #202020;
   border-radius: 3px;
   padding: 5px; }
+
+input[type="checkbox"] + label,
+label + input[type="checkbox"] {
+  margin-left: 7px; }
+
+input[type=checkbox].slider {
+  border-radius: 6px;
+  outline: none;
+  position: relative;
+  width: 34px; }
+  input[type=checkbox].slider::before, input[type=checkbox].slider::after {
+    content: '';
+    display: block;
+    visibility: visible; }
+
+input[type=checkbox].slider::before {
+  background: #555;
+  border-radius: 6px;
+  height: 12px;
+  width: 34px; }
+
+input[type=checkbox].slider::after {
+  background: #a0a0a0;
+  border-radius: 50%;
+  height: 17px;
+  left: -3px;
+  top: -2.5px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  width: 17px; }
+
+input[type=checkbox].slider:checked::after {
+  left: 20px; }
+
+input[type=checkbox].toggle {
+  border-radius: 6px;
+  outline: none;
+  position: relative;
+  width: 34px; }
+  input[type=checkbox].toggle::before, input[type=checkbox].toggle::after {
+    content: '';
+    display: block;
+    visibility: visible; }
+
+input[type=checkbox].toggle {
+  border-radius: 11px;
+  height: 22px;
+  outline: none;
+  position: relative;
+  width: 40px; }
+
+input[type=checkbox].toggle::before {
+  background: #555;
+  border-radius: 11px;
+  height: 22px;
+  width: 40px; }
+
+input[type=checkbox].toggle::after {
+  background: #a0a0a0;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  position: absolute;
+  width: 16px; }
+
+input[type=checkbox].toggle:checked::after {
+  left: 18.5px; }
+
+.image {
+  border: 3px solid #B6B6B6;
+  border-radius: 3px;
+  transition: border-color 250ms; }
+  .image:hover {
+    border-color: #6a6a6a; }
+  .image.round {
+    border-radius: 50%; }
+  .image.sm {
+    height: 70px; }
+    .image.sm.round {
+      width: 70px; }
+  .image.md {
+    height: 125px; }
+    .image.md.round {
+      width: 125px; }
+  .image.lg {
+    height: 200px; }
+    .image.lg.round {
+      width: 200px; }
+  .image.xlg {
+    height: 350px; }
+    .image.xlg.round {
+      width: 350px; }
+  .image.fluid {
+    width: auto;
+    max-width: 100%;
+    height: auto !important; }
+
+table td, table th {
+  padding: 0 5px; }
+
+table thead {
+  background-color: #B6B6B6; }
+
+table tbody tr {
+  transition: background-color 250ms; }
+
+table tbody tr:hover {
+  background-color: #cccccc; }
+
+table.striped tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.9); }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.row {
+  *zoom: 1; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+
+/* Grid */
+.grid.padded {
+  padding: 20px 0 20px 20px; }
+
+.row {
+  margin-left: -10px; }
+
+.col {
+  float: left;
+  padding: 0 10px; }
+
+.col:last-of-type {
+  padding-right: 0; }
+
+.grid.padded > .row:last-of-type {
+  padding-right: 20px; }
+
+.lg10 {
+  width: 10%; }
+
+.lg20 {
+  width: 20%; }
+
+.lg30 {
+  width: 30%; }
+
+.lg33 {
+  width: 33.3333333%; }
+
+.lg35 {
+  width: 35%; }
+
+.lg40 {
+  width: 40%; }
+
+.lg50 {
+  width: 50%; }
+
+.lg60 {
+  width: 60%; }
+
+.lg65 {
+  width: 65%; }
+
+.lg66 {
+  width: 66.6666666%; }
+
+.lg70 {
+  width: 70%; }
+
+.lg80 {
+  width: 80%; }
+
+.lg90 {
+  width: 90%; }
+
+.lg100 {
+  width: 100%; }
+
+@media only screen and (max-width: 920px) {
+  .grid.padded {
+    padding-left: 0; }
+  .grid.padded > .row:last-of-type {
+    padding-right: 10px; }
+  .row {
+    margin-left: 0; }
+  .col {
+    padding-right: 0; }
+  .md10 {
+    width: 10%; }
+  .md20 {
+    width: 20%; }
+  .md30 {
+    width: 30%; }
+  .md33 {
+    width: 33.3333333%; }
+  .md35 {
+    width: 35%; }
+  .md40 {
+    width: 40%; }
+  .md50 {
+    width: 48%; }
+  .md60 {
+    width: 60%; }
+  .md65 {
+    width: 65%; }
+  .md66 {
+    width: 66.6666666%; }
+  .md70 {
+    width: 70%; }
+  .md80 {
+    width: 80%; }
+  .md90 {
+    width: 90%; }
+  .md100 {
+    width: 100%; } }
+
+@media only screen and (max-width: 580px) {
+  .sm10 {
+    width: 10%; }
+  .sm20 {
+    width: 20%; }
+  .sm30 {
+    width: 30%; }
+  .sm33 {
+    width: 33.33333333%; }
+  .sm35 {
+    width: 35%; }
+  .sm40 {
+    width: 40%; }
+  .sm50 {
+    width: 50%; }
+  .sm60 {
+    width: 60%; }
+  .sm65 {
+    width: 65%; }
+  .sm66 {
+    width: 66.66666666%; }
+  .sm70 {
+    width: 70%; }
+  .sm80 {
+    width: 80%; }
+  .sm90 {
+    width: 90%; }
+  .sm100 {
+    width: 100%; } }
 

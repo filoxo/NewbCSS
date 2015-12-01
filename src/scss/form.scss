@@ -1,0 +1,111 @@
+%outline:focus {
+  outline:none;
+  box-shadow:0 0 5px rgba(59, 153, 252, .75);
+}
+
+// All things forms
+input, textarea, select {
+  border:1.5px solid $base;
+  border-radius:$border-radius;
+  padding:5px;
+  @extend %outline;
+}
+
+// Checkboxes
+input[type="checkbox"] + label,
+label + input[type="checkbox"] {
+  margin-left:7px; }
+
+// These are the minimum sizes to simply cover up the checkbox
+$slider-track-width:34px;
+$slider-track-height:12px;
+$slider-handle-size:$slider-track-width/2;
+//Slider checkbox
+input[type=checkbox].slider {
+  border-radius:$slider-track-height/2;
+  outline:none;
+  position:relative;
+  width:$slider-track-width;
+
+  &::before, &::after{
+    content: '';
+    display:block;
+    visibility:visible; }
+}
+//Slider track
+input[type=checkbox].slider::before {
+  background:#555;
+  border-radius:$slider-track-height/2;
+  height:$slider-track-height;
+  width:$slider-track-width; }
+//Slider handle
+input[type=checkbox].slider::after {
+  background:lighten($base, 50);
+  border-radius: 50%;
+  height:$slider-handle-size;
+  left: -3px;
+  top:-($slider-handle-size/2)+($slider-track-height/2) ;
+
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+
+  width:$slider-track-width/2; }
+input[type=checkbox].slider:checked::after {
+  left:$slider-track-width/2 + 3; }
+
+//Toggle checkbox
+input[type=checkbox].toggle {
+  border-radius:$slider-track-height/2;
+  outline:none;
+  position:relative;
+  width:$slider-track-width;
+
+  &::before, &::after{
+    content: '';
+    display:block;
+    visibility:visible; }
+}
+
+//Toggle variables
+$toggle-handle-size:16px; // Minimum size
+$toggle-spacing:3px;
+$toggle-track-height:$toggle-handle-size + $toggle-spacing*2;
+$toggle-track-width:40px;
+
+input[type=checkbox].toggle {
+  border-radius:$toggle-track-height/2;
+  height:$toggle-track-height;
+  outline:none;
+  position:relative;
+  width:$toggle-track-width; }
+
+//Toggle track
+input[type=checkbox].toggle::before {
+  background:#555;
+  border-radius:$toggle-track-height/2;
+  height:$toggle-track-height;
+  width:$toggle-track-width; }
+//Toggle handle
+input[type=checkbox].toggle::after {
+  background:lighten($base, 50);
+  border-radius: 50%;
+  cursor: pointer;
+  height:$toggle-handle-size;
+  left:$toggle-spacing;
+  top:-($toggle-handle-size/2)+($toggle-track-height/2) ;
+
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  position: absolute;
+
+  width:$toggle-handle-size; }
+input[type=checkbox].toggle:checked::after {
+  left:($toggle-track-width - $toggle-spacing)/2; }

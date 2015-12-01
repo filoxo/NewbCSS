@@ -1,0 +1,13 @@
+table {
+  td, th { padding:0 5px; }
+  thead { background-color:$grey; }
+  tbody{
+    tr{ transition:background-color $btn-transition; }
+    tr:hover { background-color:darken($white, 20) }
+  }
+  &.striped{
+    tbody{
+      tr:nth-child(even) { background-color:transparentize($white, .1); }
+    }
+  }
+}

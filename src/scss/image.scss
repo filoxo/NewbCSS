@@ -1,0 +1,28 @@
+$sm-size:70px;
+$md-size:125px;
+$lg-size:200px;
+$xlg-size:350px;
+
+@mixin image-size($size) {
+  height:$size;
+  &.round {
+    width:$size;
+  }
+}
+.image {
+  border:3px solid $grey;
+  border-radius:$border-radius;
+  transition:border-color 250ms;
+  &:hover{ border-color:darken($grey, 30); }
+  &.round{ border-radius:50%; }
+
+  &.sm{ @include image-size($sm-size); }
+  &.md{ @include image-size($md-size); }
+  &.lg{ @include image-size($lg-size); }
+  &.xlg{ @include image-size($xlg-size); }
+  &.fluid{
+    width: auto;
+    max-width: 100%;
+    height: auto !important;
+  }
+}
