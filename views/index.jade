@@ -5,206 +5,222 @@ html(lang="en")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="/dist/css/newb.css")
   body.page
-    h1 Welcome to NewbCSS
-    p Intro and description
-    h2 Philosophies
-    .container
-      h4 CSS3
-      p.
-        I have no real interest in using backwards and broken technologies. My focus is to try to make this lib as simple as possible using current technologies, so if you need <= IE9 you may need to look elsewhere.
-      h4 Accessibility
-      p.
-        I'm learning about and experimenting with Accessibility. I'll try to improve where I can, as much as I can.
-      h4 Support
-      p.
-        At this point, I'm much more interested in learning and creating than maintaining this as a project proper. That said, feel free to fork, add and remove, and submit a PR to see if that's something that others might also benefit from.
-    h2#buttons Buttons
-    .container
-      h3 #[code .btn]s
-      button.btn DEFAULT
-      button.btn.blue BLUE
-      button.btn.red RED
-      button.btn.grey GREY
-      button.btn.orange ORANGE
-      button.btn.yellow YELLOW
-      button.btn.pink PINK
-      a.btn.blue(href="#") BLUE LINK
-    .container
-      h3 #[code .dark.btn]s
-      .container.bg.dark
+    main
+      h1 Welcome to NewbCSS
+      p Intro and description
+      h2 Philosophies
+      section.container
+        h4 CSS3
+        p.
+          I have no real interest in using backwards and broken technologies. My focus is to try to make this lib as simple as possible using current technologies, so if you need <= IE9 you may need to look elsewhere.
+        h4 Icons
+        p.
+          I've included #[a(href="https://fortawesome.github.io/Font-Awesome/", target="_blank") Fontawesome] because it is a great library with tons of beautiful icons. 'Nuff said.
+        h4 Accessibility
+        p.
+          I'm learning about and experimenting with Accessibility. I'll try to improve where I can, as much as I can.
+        h4 Support
+        p.
+          At this point, I'm much more interested in learning and creating than maintaining this as a project proper. That said, feel free to fork, add and remove, and submit a PR to see if that's something that others might also benefit from.
+      h2#buttons Buttons
+      section.container
+        h3 #[code .btn]s
+        button.btn DEFAULT
+        button.btn.green GREEN
+        button.btn.blue BLUE
+        button.btn.red RED
+        button.btn.grey GREY
+        button.btn.orange ORANGE
+        button.btn.yellow YELLOW
+        button.btn.pink PINK
+        a.btn.blue(href="#") BLUE LINK
+      section.container.bg.dark
+        h3 #[code .dark.btn]s
         button.btn.dark.white WHITE
+        button.btn.dark.green GREEN
         button.btn.dark.blue BLUE
         button.btn.dark.red RED
         button.btn.dark.grey GREY
         button.btn.dark.orange ORANGE
         button.btn.dark.yellow YELLOW
         button.btn.dark.pink PINK
-    .container
-      h3 #[code .round.btn]s
-      button.btn.round ROUND
-      a(href="#").btn.round.blue ROUND BLUE ANCHOR
-    .container
-      h3 #[code .btn] sizes
-      button.btn.sm .btn.sm
-      button.btn DEFAULT
-      button.btn.lg .btn.lg
-      button.btn.xlg .btn.xlg
-      p.
-        Looking for a smaller button? That might be too small to be tapable...
-        But if you're just going for the look, check out #[a(href="#badge") Badges].
-    h2#links Links
-    .container
-      p: a(href="#") Anchor
-      button.link Button as a link
-      p Links inside text will be #[a.link underlined] so that they sound out.
-    h2#alerts Alerts
-    .container
-      h3 #[code .alert]s
-      .alert(role="alert") They are transparent by default.
-      .alert.green(role="alert") They should be used to provide information. Green may or may not be equated with success messages.
-      .alert.blue.slim(role="alert"): p Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
-      .alert.yellow(role="alert") Yellow is usually used for issues that do not require immediate action.
-      .alert.red(role="alert") Red can be the most 'serious' of alerts.
-      .alert.white(role="alert") Neutral info. Like something about how about cookies are used for your website...
-      h3 #[code .solid.alert]
-      .alert.solid(role="alert") Lorem ipsum something.
-      .alert.green.solid(role="alert") Good job! You did something!
-      .alert.blue.solid(role="alert") Just so you know, something happened but it's whatevs.
-      .alert.yellow.solid(role="alert") Uh-oh, something might be happening.
-      .alert.red.solid(role="alert") Attention: something definitely happened.
-      .container.bg.dark
+      section.container
+        h3 #[code .solid.btn]s
+        button.btn.solid.upper default
+        button.btn.solid.blue.upper blue
+        button.btn.solid.red.upper red
+        button.btn.solid.green.upper green
+      section.container
+        h3 #[code .round.btn]s
+        button.btn.round ROUND
+        a(href="#").btn.round.blue ROUND BLUE ANCHOR
+      section.container
+        h3 #[code .btn] sizes
+        button.btn.sm .btn.sm
+        button.btn DEFAULT
+        button.btn.lg .btn.lg
+        button.btn.xlg .btn.xlg
+        p.
+          Looking for a smaller button? That might be too small to be tapable...
+          But if you're just going for the look, check out #[a(href="#badge") Badges].
+      h2#links Links
+      section.container
+        p: a(href="#") Anchor
+        button.link Button as a link
+        p Links inside text will be #[a.link underlined] so that they sound out.
+      h2#alerts Alerts
+      section.container
+        h3 #[code .alert]s
+        .alert(role="alert") They are transparent by default.
+        .alert.green(role="alert") They should be used to provide information. Green may or may not be equated with success messages.
+        .alert.blue(role="alert"): p Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
+        .alert.yellow(role="alert") Yellow is usually used for issues that do not require immediate action.
+        .alert.red(role="alert") Red can be the most 'serious' of alerts.
+        section.container.bg.dark
+          .alert.white(role="alert") Neutral info. Like something about how about cookies are used for your website...
+        h3 #[code .solid.alert]
+        .alert.solid(role="alert") Lorem ipsum something.
+        .alert.green.solid(role="alert") Good job! You did something!
+        .alert.blue.solid(role="alert") Just so you know, something happened but it's whatevs.
+        .alert.yellow.solid(role="alert") Uh-oh, something might be happening.
+        .alert.red.solid(role="alert") Attention: something definitely happened.
         .alert.white.solid(role="alert") To alert or not to alert? That is the question.
-      h3 #[code .alert] with #[code .bg]
-      .alert.blue.bg.light(role="alert") "HEY! Listen!" ~ Navi, Legend of Zelda
-      .alert.yellow.bg.dark(role="alert") "HYYAAAAAAHHHHH!" ~ Link, Legend of Zelda
-      h3 #[code .slim.alert]
-      .alert.blue.slim(role="alert") Maybe not? It looks like a really long button that doesn't do anything on hover...
-      h3 #[code .dismissable.alert]s
-      .row
-        .col.lg50
-          .alert.blue.dismissable(role="alert")
-            p You can close this alert.
-        .col.lg50
-          .alert.solid.red.dismissable(role="alert")
-            p You can close this alert. Note the alternate close button style; it is because this is a solid alert.
-    h2 Forms
-    .container
-      .row
-        .col.lg20
-          h3 Simple Input
-          p: input
-        .col.lg20
-          h3 Text area
-          p: textarea
-        .col.lg20
-          h3 Dropdowns
-          select
-            option Option 1
-            option Option 2
-            option Option 3
-            option Option 4
-            option Option 5
-      .row
-        h3 Checkboxes
-        .col.lg20
-         input(type="checkbox", id="chkbx1")
-         label(for="chkbx1") Simple Checkbox
-        .col.lg20
-         input(type="checkbox", id="chkbx2", checked, aria-checked="true")
-         label(for="chkbx2") Prechecked Box
-        .col.lg20
-         input.slider(type="checkbox", id="chkbx3")
-         label(for="chkbx3") Slider checkbox
+        h3 #[code .alert] with #[code .bg]
+        .alert.blue.bg.light(role="alert") "HEY! Listen!" ~ Navi, Legend of Zelda
+        .alert.yellow.bg.dark(role="alert") "HYYAAAAAAHHHHH!" ~ Link, Legend of Zelda
+        h3 #[code .slim.alert]
+        .alert.blue.slim(role="alert") Maybe not? It looks like a really long button that doesn't do anything on hover...
+        h3 #[code .dismissable.alert]s
+        .row
+          .col.lg50
+            .alert.blue.dismissable(role="alert")
+              p You can close this alert.
+          .col.lg50
+            .alert.solid.red.dismissable(role="alert")
+              p You can close this alert. Note the alternate close button style; it is because this is a solid alert.
+      h2 Forms
+      section.container
+        .row
+          .col.lg20
+            h3 Simple Input
+            p: input
+          .col.lg20
+            h3 Text area
+            p: textarea
+          .col.lg20
+            h3 Dropdowns
+            select
+              option Option 1
+              option Option 2
+              option Option 3
+              option Option 4
+              option Option 5
+        .row
+          h3 Checkboxes
+          .col.lg20
+           input(type="checkbox", id="chkbx1")
+           label(for="chkbx1") Simple Checkbox
+          .col.lg20
+           input(type="checkbox", id="chkbx2", checked, aria-checked="true")
+           label(for="chkbx2") Prechecked Box
+          .col.lg20
+           input.slider(type="checkbox", id="chkbx3")
+           label(for="chkbx3") Slider checkbox
 
-        .col.lg20
-         input.toggle(type="checkbox", id="chkbx4")
-         label(for="chkbx4") Toggle checkbox
-       .row
-         .col.lg100
-           p Remember to always associate labels with their inputs using #[code for="checkboxIdName"]
-    h2 Tables
-    .container.grid
+          .col.lg20
+           input.toggle(type="checkbox", id="chkbx4")
+           label(for="chkbx4") Toggle checkbox
+         .row
+           .col.lg100
+             p Remember to always associate labels with their inputs using #[code for="checkboxIdName"]
+      h2 Tables
+      section.container.grid
+        .row
+          .col.lg33.sm100
+            table.table
+              thead
+                tr: th Standard table
+              tbody
+                tr: td Row 1
+                tr: td Row 2
+                tr: td Row 3
+                tr: td Row 4
+                tr: td Row 5
+                tr: td Row 6
+          .col.lg33.sm100
+            table.striped.table
+              thead
+                tr: th Striped table
+              tbody
+                tr: td Row 1
+                tr: td Row 2
+                tr: td Row 3
+                tr: td Row 4
+                tr: td Row 5
+                tr: td Row 6
+          .col.lg33
+            table.table
+              thead
+                tr: th Standard table
+              tbody
+                tr: td Row 1
+                tr: td Row 2
+                tr: td Row 3
+                tr: td Row 4
+                tr: td Row 5
+                tr: td Row 6
+      h2 Images
+      section.container
+        .grid
+          .row
+            .col.lg50
+              img(src='https://placehold.it/150x100').image
+              img(src='https://placehold.it/100x100').image.round
+            .col.lg50
+              img(src='https://placehold.it/150x100').image.sm
+              img(src='https://placehold.it/70x70').image.round.sm
+      h2 Text helper classes
+      section.container
+        .grid
+          .row
+            .col.lg33.sm100
+              h3 #[code .text-left]
+              p.text-left Left aligned text
+            .col.lg33.sm100
+              h3 #[code .text-center]
+              p.text-center Center aligned text
+            .col.lg33.sm100
+              h3 #[code .text-right]
+              p.text-right Right aligned text
+          .row.text-center
+            .col.lg25.sm100
+              h3 #[code .text-lg]
+              span.text-lg Large
+            .col.lg25.sm100
+              h3 #[code .text-xlg]
+              span.text-xlg Extra large
+            .col.lg25.sm100
+              h3 #[code .text-2xlg]
+              span.text-2xlg 2x Large
+            .col.lg25.sm100
+              h3 #[code .text-3xlg]
+              span.text-3xlg 3x Large
+      h2 TODOs
+      section.container
+        ul
+          li Checkboxes
+          li Lists (ul, ol)
+          li Badges
+          li Card styles
+          li Tags (or chips)
+          li Nav bar...?
+          li Progress bar
+          li Javascript for
+            ul
+              li modals
+              li tabs
+              li autogrow textarea
+    footer.grid.padded
       .row
-        .col.lg33.sm100
-          table.table
-            thead
-              tr: th Standard table
-            tbody
-              tr: td Row 1
-              tr: td Row 2
-              tr: td Row 3
-              tr: td Row 4
-              tr: td Row 5
-              tr: td Row 6
-        .col.lg33.sm100
-          table.striped.table
-            thead
-              tr: th Striped table
-            tbody
-              tr: td Row 1
-              tr: td Row 2
-              tr: td Row 3
-              tr: td Row 4
-              tr: td Row 5
-              tr: td Row 6
-        .col.lg33
-          table.table
-            thead
-              tr: th Standard table
-            tbody
-              tr: td Row 1
-              tr: td Row 2
-              tr: td Row 3
-              tr: td Row 4
-              tr: td Row 5
-              tr: td Row 6
-    h2 Images
-    .container
-      .grid
-        .row
-          .col.lg50
-            img(src='https://placehold.it/150x100').image
-            img(src='https://placehold.it/100x100').image.round
-          .col.lg50
-            img(src='https://placehold.it/150x100').image.sm
-            img(src='https://placehold.it/70x70').image.round.sm
-    h2 Text helper classes
-    .container
-      .grid
-        .row
-          .col.lg33.sm100
-            h3 #[code .text-left]
-            p.text-left Left aligned text
-          .col.lg33.sm100
-            h3 #[code .text-center]
-            p.text-center Center aligned text
-          .col.lg33.sm100
-            h3 #[code .text-right]
-            p.text-right Right aligned text
-        .row.text-center
-          .col.lg25.sm100
-            h3 #[code .text-lg]
-            span.text-lg Large
-          .col.lg25.sm100
-            h3 #[code .text-xlg]
-            span.text-xlg Extra large
-          .col.lg25.sm100
-            h3 #[code .text-2xlg]
-            span.text-2xlg 2x Large
-          .col.lg25.sm100
-            h3 #[code .text-3xlg]
-            span.text-3xlg 3x Large
-    h2 TODOs
-    .container
-      ul
-        li Checkboxes
-        li Lists (ul, ol)
-        li Badges
-        li Card styles
-        li Tags (or chips)
-        li Nav bar...?
-        li Javascript for
-          ul
-            li modals
-            li
+        p.text-right.text-muted &copy; | 2016
     script(src='dist/js/newb.js')
