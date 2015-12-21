@@ -1,17 +1,23 @@
 doctype html
 html(lang="en")
   head
-    title="Newb CSS"
-    link(rel="stylesheet", href="/newb.css")
+    title="NewbCSS"
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="/dist/css/newb.css")
   body.page
     h1 Welcome to NewbCSS
     p Intro and description
     h2 Philosophies
     .container
+      h4 CSS3
+      p.
+        I have no real interest in using backwards and broken technologies. My focus is to try to make this lib as simple as possible using current technologies, so if you need <= IE9 you may need to look elsewhere.
       h4 Accessibility
       p.
-        I'm experimenting with and learning about Accessibility. I've left things like the #[code outline] styles for
-        good reasons. I'll try to improve where I can.
+        I'm learning about and experimenting with Accessibility. I'll try to improve where I can, as much as I can.
+      h4 Support
+      p.
+        At this point, I'm much more interested in learning and creating than maintaining this as a project proper. That said, feel free to fork, add and remove, and submit a PR to see if that's something that others might also benefit from.
     h2#buttons Buttons
     .container
       h3 #[code .btn]s
@@ -22,7 +28,7 @@ html(lang="en")
       button.btn.orange ORANGE
       button.btn.yellow YELLOW
       button.btn.pink PINK
-      a.btn.blue BLUE LINK
+      a.btn.blue(href="#") BLUE LINK
     .container
       h3 #[code .dark.btn]s
       .container.bg.dark
@@ -54,47 +60,151 @@ html(lang="en")
     h2#alerts Alerts
     .container
       h3 #[code .alert]s
-      .alert They are transparent by default.
-      .alert.green They should be used to provide information. Green may or may not be equated with success messages.
-      .alert.blue.slim: p Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
-      .alert.yellow Yellow is usually used for issues that do not require immediate action.
-      .alert.red Red can be the most 'serious' of alerts.
-      .container.bg.dark
-        .alert.white Neutral info. Like something about how about cookies are used for your website...
+      .alert(role="alert") They are transparent by default.
+      .alert.green(role="alert") They should be used to provide information. Green may or may not be equated with success messages.
+      .alert.blue.slim(role="alert"): p Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
+      .alert.yellow(role="alert") Yellow is usually used for issues that do not require immediate action.
+      .alert.red(role="alert") Red can be the most 'serious' of alerts.
+      .alert.white(role="alert") Neutral info. Like something about how about cookies are used for your website...
       h3 #[code .solid.alert]
-      .alert.solid Lorem ipsum something.
-      .alert.green.solid Good job! You did something!
-      .alert.blue.solid Just so you know, something happened but it's whatevs.
-      .alert.yellow.solid Uh-oh, something might be happening.
-      .alert.red.solid Attention: something definitely happened.
+      .alert.solid(role="alert") Lorem ipsum something.
+      .alert.green.solid(role="alert") Good job! You did something!
+      .alert.blue.solid(role="alert") Just so you know, something happened but it's whatevs.
+      .alert.yellow.solid(role="alert") Uh-oh, something might be happening.
+      .alert.red.solid(role="alert") Attention: something definitely happened.
       .container.bg.dark
-        .alert.white.solid To alert or not to alert? That is the question.
+        .alert.white.solid(role="alert") To alert or not to alert? That is the question.
       h3 #[code .alert] with #[code .bg]
-      .alert.blue.bg.light "HEY! Listen!" ~ Navi, Legend of Zelda
-      .alert.yellow.bg.dark "HYYAAAAAAHHHHH!" ~ Link, Legend of Zelda
+      .alert.blue.bg.light(role="alert") "HEY! Listen!" ~ Navi, Legend of Zelda
+      .alert.yellow.bg.dark(role="alert") "HYYAAAAAAHHHHH!" ~ Link, Legend of Zelda
       h3 #[code .slim.alert]
-      .alert.blue.slim Maybe not? It looks like a really long button that doesn't do anything on hover...
+      .alert.blue.slim(role="alert") Maybe not? It looks like a really long button that doesn't do anything on hover...
+      h3 #[code .dismissable.alert]s
+      .row
+        .col.lg50
+          .alert.blue.dismissable(role="alert")
+            p You can close this alert.
+        .col.lg50
+          .alert.solid.red.dismissable(role="alert")
+            p You can close this alert. Note the alternate close button style; it is because this is a solid alert.
     h2 Forms
     .container
-       h3 Input
-       p: input
-       h3 Text area
-       p: textarea
-    h2 TODO
+      .row
+        .col.lg20
+          h3 Simple Input
+          p: input
+        .col.lg20
+          h3 Text area
+          p: textarea
+        .col.lg20
+          h3 Dropdowns
+          select
+            option Option 1
+            option Option 2
+            option Option 3
+            option Option 4
+            option Option 5
+      .row
+        h3 Checkboxes
+        .col.lg20
+         input(type="checkbox", id="chkbx1")
+         label(for="chkbx1") Simple Checkbox
+        .col.lg20
+         input(type="checkbox", id="chkbx2", checked, aria-checked="true")
+         label(for="chkbx2") Prechecked Box
+        .col.lg20
+         input.slider(type="checkbox", id="chkbx3")
+         label(for="chkbx3") Slider checkbox
+
+        .col.lg20
+         input.toggle(type="checkbox", id="chkbx4")
+         label(for="chkbx4") Toggle checkbox
+       .row
+         .col.lg100
+           p Remember to always associate labels with their inputs using #[code for="checkboxIdName"]
+    h2 Tables
+    .container.grid
+      .row
+        .col.lg33.sm100
+          table.table
+            thead
+              tr: th Standard table
+            tbody
+              tr: td Row 1
+              tr: td Row 2
+              tr: td Row 3
+              tr: td Row 4
+              tr: td Row 5
+              tr: td Row 6
+        .col.lg33.sm100
+          table.striped.table
+            thead
+              tr: th Striped table
+            tbody
+              tr: td Row 1
+              tr: td Row 2
+              tr: td Row 3
+              tr: td Row 4
+              tr: td Row 5
+              tr: td Row 6
+        .col.lg33
+          table.table
+            thead
+              tr: th Standard table
+            tbody
+              tr: td Row 1
+              tr: td Row 2
+              tr: td Row 3
+              tr: td Row 4
+              tr: td Row 5
+              tr: td Row 6
+    h2 Images
+    .container
+      .grid
+        .row
+          .col.lg50
+            img(src='http://placehold.it/150x100').image
+            img(src='http://placehold.it/100x100').image.round
+          .col.lg50
+            img(src='http://placehold.it/150x100').image.sm
+            img(src='http://placehold.it/70x70').image.round.sm
+    h2 Text helper classes
+    .container
+      .grid
+        .row
+          .col.lg33.sm100
+            h3 #[code .text-left]
+            p.text-left Left aligned text
+          .col.lg33.sm100
+            h3 #[code .text-center]
+            p.text-center Center aligned text
+          .col.lg33.sm100
+            h3 #[code .text-right]
+            p.text-right Right aligned text
+        .row.text-center
+          .col.lg25.sm100
+            h3 #[code .text-lg]
+            span.text-lg Large
+          .col.lg25.sm100
+            h3 #[code .text-xlg]
+            span.text-xlg Extra large
+          .col.lg25.sm100
+            h3 #[code .text-2xlg]
+            span.text-2xlg 2x Large
+          .col.lg25.sm100
+            h3 #[code .text-3xlg]
+            span.text-3xlg 3x Large
+    h2 TODOs
     .container
       ul
-        li Form radios, checkboxes, selects, labels
-        li Lists
+        li Checkboxes
+        li Lists (ul, ol)
         li Badges
-        li Tags
-        li Text helper classes
-        li Grid system!?!?
-        li Nav bar... yikes.
-        li image classes
-        li Tables?
-        li Add icons (probably fontawesome)
+        li Card styles
+        li Tags (or chips)
+        li Nav bar...?
         li Javascript for
           ul
-            li dismissible alerts
             li modals
-
+            li
+    script(src='dist/js/newb.js')

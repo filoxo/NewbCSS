@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NewbCSS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/newb.css">
+  </head>
+  <body class="page">
+    <h1>Welcome to NewbCSS</h1>
+    <p>Intro and description</p>
+    <h2>Philosophies</h2>
+    <div class="container">
+      <h4>CSS3</h4>
+      <p>I have no real interest in using backwards and broken technologies. My focus is to try to make this lib as simple as possible using current technologies, so if you need <= IE9 you may need to look elsewhere.</p>
+      <h4>Accessibility</h4>
+      <p>I'm learning about and experimenting with Accessibility. I'll try to improve where I can, as much as I can.</p>
+      <h4>Support</h4>
+      <p>At this point, I'm much more interested in learning and creating than maintaining this as a project proper. That said, feel free to fork, add and remove, and submit a PR to see if that's something that others might also benefit from.</p>
+    </div>
+    <h2 id="buttons">Buttons</h2>
+    <div class="container">
+      <h3><code>.btn</code>s</h3>
+      <button class="btn">DEFAULT</button>
+      <button class="btn blue">BLUE</button>
+      <button class="btn red">RED</button>
+      <button class="btn grey">GREY</button>
+      <button class="btn orange">ORANGE</button>
+      <button class="btn yellow">YELLOW</button>
+      <button class="btn pink">PINK</button><a href="#" class="btn blue">BLUE LINK</a>
+    </div>
+    <div class="container">
+      <h3><code>.dark.btn</code>s</h3>
+      <div class="container bg dark">
+        <button class="btn dark white">WHITE</button>
+        <button class="btn dark blue">BLUE</button>
+        <button class="btn dark red">RED</button>
+        <button class="btn dark grey">GREY</button>
+        <button class="btn dark orange">ORANGE</button>
+        <button class="btn dark yellow">YELLOW</button>
+        <button class="btn dark pink">PINK</button>
+      </div>
+    </div>
+    <div class="container">
+      <h3><code>.round.btn</code>s</h3>
+      <button class="btn round">ROUND</button><a href="#" class="btn round blue">ROUND BLUE ANCHOR</a>
+    </div>
+    <div class="container">
+      <h3><code>.btn</code> sizes</h3>
+      <button class="btn sm">.btn.sm</button>
+      <button class="btn">DEFAULT</button>
+      <button class="btn lg">.btn.lg</button>
+      <button class="btn xlg">.btn.xlg</button>
+      <p>
+        Looking for a smaller button? That might be too small to be tapable...
+        But if you're just going for the look, check out <a href="#badge">Badges</a>.
+      </p>
+    </div>
+    <h2 id="links">Links</h2>
+    <div class="container">
+      <p><a href="#">Anchor</a></p>
+      <button class="link">Button as a link</button>
+      <p>Links inside text will be <a class="link">underlined</a> so that they sound out.</p>
+    </div>
+    <h2 id="alerts">Alerts</h2>
+    <div class="container">
+      <h3><code>.alert</code>s</h3>
+      <div role="alert" class="alert">They are transparent by default.</div>
+      <div role="alert" class="alert green">They should be used to provide information. Green may or may not be equated with success messages.</div>
+      <div role="alert" class="alert blue slim">
+        <p>Blue could be informational messages that are not critical. Maybe add a link for <a class="link">more information</a>.</p>
+      </div>
+      <div role="alert" class="alert yellow">Yellow is usually used for issues that do not require immediate action.</div>
+      <div role="alert" class="alert red">Red can be the most 'serious' of alerts.</div>
+      <div class="container bg dark">
+        <div role="alert" class="alert white">Neutral info. Like something about how about cookies are used for your website...</div>
+      </div>
+      <h3><code>.solid.alert</code></h3>
+      <div role="alert" class="alert solid">Lorem ipsum something.</div>
+      <div role="alert" class="alert green solid">Good job! You did something!</div>
+      <div role="alert" class="alert blue solid">Just so you know, something happened but it's whatevs.</div>
+      <div role="alert" class="alert yellow solid">Uh-oh, something might be happening.</div>
+      <div role="alert" class="alert red solid">Attention: something definitely happened.</div>
+      <div class="container bg dark">
+        <div role="alert" class="alert white solid">To alert or not to alert? That is the question.</div>
+      </div>
+      <h3><code>.alert</code> with <code>.bg</code></h3>
+      <div role="alert" class="alert blue bg light">"HEY! Listen!" ~ Navi, Legend of Zelda</div>
+      <div role="alert" class="alert yellow bg dark">"HYYAAAAAAHHHHH!" ~ Link, Legend of Zelda</div>
+      <h3><code>.slim.alert</code></h3>
+      <div role="alert" class="alert blue slim">Maybe not? It looks like a really long button that doesn't do anything on hover...</div>
+      <h3><code>.dismissable.alert</code>s</h3>
+      <div class="row">
+        <div class="col lg50">
+          <div role="alert" class="alert blue dismissable">
+            <p>You can close this</p>
+          </div>
+        </div>
+        <div class="col lg50">
+          <div role="alert" class="alert solid red dismissable">
+            <p>You can close this</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Forms</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col lg20">
+          <h3>Input</h3>
+          <p>
+            <input>
+          </p>
+        </div>
+        <div class="col lg20">
+          <h3>Text area</h3>
+          <p>
+            <textarea></textarea>
+          </p>
+        </div>
+        <div class="col lg20">
+          <h3>Dropdowns</h3>
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <h3>Checkboxes</h3>
+        <div class="col lg20">
+          <input type="checkbox" id="chkbx1">
+          <label for="chkbx1">Simple Checkbox</label>
+        </div>
+        <div class="col lg20">
+          <input type="checkbox" id="chkbx2" checked aria-checked="true">
+          <label for="chkbx2">Prechecked Box</label>
+        </div>
+        <div class="col lg20">
+          <input type="checkbox" id="chkbx3" class="slider">
+          <label for="chkbx3">Slider checkbox</label>
+        </div>
+        <div class="col lg20">
+          <input type="checkbox" id="chkbx4" class="toggle">
+          <label for="chkbx4">Toggle checkbox</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col lg100">
+          <p>Remember to always associate labels with their inputs using <code>for="checkboxIdName"</code></p>
+        </div>
+      </div>
+    </div>
+    <h2>Tables</h2>
+    <div class="container grid">
+      <div class="row">
+        <div class="col lg33 sm100">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Standard table</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1</td>
+              </tr>
+              <tr>
+                <td>Row 2</td>
+              </tr>
+              <tr>
+                <td>Row 3</td>
+              </tr>
+              <tr>
+                <td>Row 4</td>
+              </tr>
+              <tr>
+                <td>Row 5</td>
+              </tr>
+              <tr>
+                <td>Row 6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col lg33 sm100">
+          <table class="striped table">
+            <thead>
+              <tr>
+                <th>Striped table</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1</td>
+              </tr>
+              <tr>
+                <td>Row 2</td>
+              </tr>
+              <tr>
+                <td>Row 3</td>
+              </tr>
+              <tr>
+                <td>Row 4</td>
+              </tr>
+              <tr>
+                <td>Row 5</td>
+              </tr>
+              <tr>
+                <td>Row 6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col lg33">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Standard table</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1</td>
+              </tr>
+              <tr>
+                <td>Row 2</td>
+              </tr>
+              <tr>
+                <td>Row 3</td>
+              </tr>
+              <tr>
+                <td>Row 4</td>
+              </tr>
+              <tr>
+                <td>Row 5</td>
+              </tr>
+              <tr>
+                <td>Row 6</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <h2>Images</h2>
+    <div class="container">
+      <div class="grid">
+        <div class="row">
+          <div class="col lg50"><img src="http://placehold.it/150x100" class="image"><img src="http://placehold.it/100x100" class="image round"></div>
+          <div class="col lg50"><img src="http://placehold.it/150x100" class="image sm"><img src="http://placehold.it/70x70" class="image round sm"></div>
+        </div>
+      </div>
+    </div>
+    <h2>Text helper classes</h2>
+    <div class="container">
+      <div class="grid">
+        <div class="row">
+          <div class="col lg33">
+            <h3><code>.text-left</code></h3>
+            <p class="text-left">Left aligned text</p>
+          </div>
+          <div class="col lg33">
+            <h3><code>.text-center</code></h3>
+            <p class="text-center">Center aligned text</p>
+          </div>
+          <div class="col lg33">
+            <h3><code>.text-right</code></h3>
+            <p class="text-right">Right aligned text</p>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col lg25">
+            <h3><code>.text-lg</code></h3><span class="text-lg">Large</span>
+          </div>
+          <div class="col lg25">
+            <h3><code>.text-xlg</code></h3><span class="text-xlg">Extra large</span>
+          </div>
+          <div class="col lg25">
+            <h3><code>.text-2xlg</code></h3><span class="text-2xlg">2x Large</span>
+          </div>
+          <div class="col lg25">
+            <h3><code>.text-3xlg</code></h3><span class="text-3xlg">3x Large</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>TODO</h2>
+    <div class="container">
+      <ul>
+        <li>Lists</li>
+        <li>Badges</li>
+        <li>Tags</li>
+        <li>Text helper classes</li>
+        <li>Nav bar... yikes.</li>
+        <li>Javascript for
+          <ul>
+            <li>modals</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script src="dist/js/newb.js"></script>
+  </body>
+</html>
