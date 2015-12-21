@@ -33,6 +33,7 @@ html, body {
 .grid.padded > .row:last-of-type { padding-right: 20px; }
 .lg10 { width:10%; }
 .lg20 { width:20%; }
+.lg25 { width:25%; }
 .lg30 { width:30%; }
 .lg33 { width:33.3333333%; }
 .lg35 { width:35%; }
@@ -42,6 +43,7 @@ html, body {
 .lg65 { width:65%; }
 .lg66 { width:66.6666666%; }
 .lg70 { width:70%; }
+.lg75 { width:75%; }
 .lg80 { width:80%; }
 .lg90 { width:90%; }
 .lg100 { width: 100%; }
@@ -55,6 +57,7 @@ html, body {
   //.col:not(:first-of-type) { margin-top: 10px; }
   .md10 { width:10%; }
   .md20 { width:20%; }
+  .md25 { width:25%; }
   .md30 { width:30%; }
   .md33 { width:33.3333333%; }
   .md35 { width:35%; }
@@ -64,6 +67,7 @@ html, body {
   .md65 { width:65%; }
   .md66 { width:66.6666666%; }
   .md70 { width:70%; }
+  .md75 { width:75%; }
   .md80 { width:80%; }
   .md90 { width:90%; }
   .md100 { width:100%; }
@@ -71,6 +75,7 @@ html, body {
 @media only screen and (max-width: 580px) {
   .sm10 { width:10%; }
   .sm20 { width:20%; }
+  .sm25 { width:25%; }
   .sm30 { width:30%; }
   .sm33 { width:33.33333333%; }
   .sm35 { width:35%; }
@@ -80,6 +85,7 @@ html, body {
   .sm65 { width:65%; }
   .sm66 { width:66.66666666%; }
   .sm70 { width:70%; }
+  .sm75 { width:75%; }
   .sm80 { width:80%; }
   .sm90 { width:90%; }
   .sm100 { width:100%; }
