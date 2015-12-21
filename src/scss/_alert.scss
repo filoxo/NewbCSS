@@ -1,11 +1,12 @@
 
 @mixin alert-color($color, $textcolor:$light){
-  color:$color;
   border:3px solid $color;
+  color:$color;
   &.solid{
     color:$textcolor;
     background-color:$color;
   }
+  transition:visibility 0.5s, opacity 0.5s ease;
 }
 .alert {
   background-color:$transparent;
@@ -13,7 +14,8 @@
   border-radius:$border-radius;
   display:block;
   margin:3px;
-  padding: 10px 20px;
+  padding:10px 20px;
+  position:relative;
   &.slim {
     padding:3px 20px;
   }
@@ -32,4 +34,15 @@
   &.white {
     @include alert-color($white, $base);
   }
+  & > .close {
+    color:inherit;
+    float:right;
+    right:5px;
+    top:5px;
+    position:absolute;
+  }
+}
+.hide {
+  visibility:hidden;
+  opacity:0;
 }
