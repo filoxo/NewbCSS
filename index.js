@@ -1,10 +1,11 @@
 /**
  * Created by cfiloteo on 11/17/15.
  */
-var express = require('express');
-var app = express();
+var express = require('express'),
+		app = express();
+
 app.set('view engine', 'jade');
-app.use(express.static('build'));
+app.use(express.static(__dirname + '/'));
 
 app.get('/', function (req, res) {
 	res.render('index');
