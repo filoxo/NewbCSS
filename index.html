@@ -3,16 +3,18 @@
   <head>
     <title>NewbCSS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/dist/css/newb.css">
+    <link rel="stylesheet" href="dist/css/newb.css">
   </head>
   <body class="page">
     <main>
-      <h1>Welcome to NewbCSS - jade</h1>
+      <h1>Welcome to NewbCSS</h1>
       <p>Intro and description</p>
       <h2>Philosophies</h2>
       <section class="container">
         <h4>CSS3</h4>
         <p>I have no real interest in using backwards and broken technologies. My focus is to try to make this lib as simple as possible using current technologies, so if you need <= IE9 you may need to look elsewhere.</p>
+        <h4>Icons</h4>
+        <p>I've included <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Fontawesome</a> because it is a great library with tons of beautiful icons. 'Nuff said.</p>
         <h4>Accessibility</h4>
         <p>I'm learning about and experimenting with Accessibility. I'll try to improve where I can, as much as I can.</p>
         <h4>Support</h4>
@@ -42,7 +44,11 @@
         <button class="btn dark pink">PINK</button>
       </section>
       <section class="container">
-        <button class="btn solid green text-upper">green</button>
+        <h3><code>.solid.btn</code>s</h3>
+        <button class="btn solid upper">default</button>
+        <button class="btn solid blue upper">blue</button>
+        <button class="btn solid red upper">red</button>
+        <button class="btn solid green upper">green</button>
       </section>
       <section class="container">
         <h3><code>.round.btn</code>s</h3>
@@ -70,7 +76,7 @@
         <h3><code>.alert</code>s</h3>
         <div role="alert" class="alert">They are transparent by default.</div>
         <div role="alert" class="alert green">They should be used to provide information. Green may or may not be equated with success messages.</div>
-        <div role="alert" class="alert blue slim">
+        <div role="alert" class="alert blue">
           <p>Blue could be informational messages that are not critical. Maybe add a link for <a class="link">more information</a>.</p>
         </div>
         <div role="alert" class="alert yellow">Yellow is usually used for issues that do not require immediate action.</div>
