@@ -1,9 +1,22 @@
 table.table {
   td, th { padding:0 5px; }
   thead { background-color:$grey; }
-  tbody{
-    tr{ transition:background-color $btn-transition; }
-    tr:hover { background-color:darken($white, 20) }
+  &.fullwidth {
+    width:100%;
+  }
+  &.hover{
+    tbody{
+      tr{ transition:background-color $btn-transition; }
+      tr:hover { background-color:darken($white, 20) }
+    }
+  }
+  &.border-row {
+    tr { border:1px solid $grey; }
+    td, th { border:none; }
+  }
+  &.border-cell {
+    tr { border:none; }
+    td,th { border: 1px solid $grey; }
   }
 }
 .striped{
