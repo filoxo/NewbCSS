@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <title>NewbCSS</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/newb.css">
   </head>
-  <body class="page">
+  <body class="page responsive-text">
     <main>
       <h1>Welcome to NewbCSS</h1>
       <p>Intro and description</p>
@@ -43,44 +44,56 @@
         <button class="btn dark yellow">YELLOW</button>
         <button class="btn dark pink">PINK</button>
       </section>
-      <section class="container">
-        <h3><code>.solid.btn</code>s</h3>
-        <button class="btn solid upper">default</button>
-        <button class="btn solid blue upper">blue</button>
-        <button class="btn solid red upper">red</button>
-        <button class="btn solid green upper">green</button>
-      </section>
-      <section class="container">
-        <h3><code>.round.btn</code>s</h3>
-        <button class="btn round">ROUND</button><a href="#" class="btn round blue">ROUND BLUE ANCHOR</a>
-      </section>
-      <section class="container">
-        <h3><code>.btn</code> sizes</h3>
-        <button class="btn sm">.btn.sm</button>
-        <button class="btn">DEFAULT</button>
-        <button class="btn lg">.btn.lg</button>
-        <button class="btn xlg">.btn.xlg</button>
-        <p>
-          Looking for a smaller button? That might be too small to be tapable...
-          But if you're just going for the look, check out <a href="#badge">Badges</a>.
-        </p>
+      <section>
+        <div class="row">
+          <div class="col lg30 sm100">
+            <div class="container">
+              <h3><code>.solid.btn</code>s</h3>
+              <button class="btn solid upper">default</button>
+              <button class="btn solid blue upper">blue</button>
+              <button class="btn solid red upper">red</button>
+              <button class="btn solid green upper">green</button>
+            </div>
+          </div>
+          <div class="col lg30 sm100">
+            <div class="container">
+              <h3><code>.round.btn</code>s</h3>
+              <button class="btn round">ROUND</button><a href="#" class="btn round blue">ROUND BLUE ANCHOR</a>
+            </div>
+          </div>
+          <div class="col lg40 sm100">
+            <div class="container">
+              <h3><code>.btn</code> sizes</h3>
+              <button class="btn sm">.btn.sm</button>
+              <button class="btn">DEFAULT</button>
+              <button class="btn lg">.btn.lg</button>
+              <button class="btn xlg">.btn.xlg</button>
+            </div>
+          </div>
+        </div>
       </section>
       <h2 id="links">Links</h2>
       <section class="container">
         <p><a href="#">Anchor</a></p>
         <button class="link">Button as a link</button>
-        <p>Links inside text will be <a class="link">underlined</a> so that they sound out.</p>
+        <p>Links inside text will be <a class="link">underlined</a> so that they stand out.</p>
       </section>
       <h2 id="alerts">Alerts</h2>
       <section class="container">
-        <h3><code>.alert</code>s</h3>
+        <h3>Basic <code>.alert</code>s</h3>
         <div role="alert" class="alert">They are transparent by default.</div>
-        <div role="alert" class="alert green">They should be used to provide information. Green may or may not be equated with success messages.</div>
-        <div role="alert" class="alert blue">
-          <p>Blue could be informational messages that are not critical. Maybe add a link for <a class="link">more information</a>.</p>
+        <div role="alert" class="alert green">
+          <p class="fa fa-check"> They should be used to provide information. Green may or may not be equated with success messages.</p>
         </div>
-        <div role="alert" class="alert yellow">Yellow is usually used for issues that do not require immediate action.</div>
-        <div role="alert" class="alert red">Red can be the most 'serious' of alerts.</div>
+        <div role="alert" class="alert blue">
+          <p class="fa fa-signal"> Blue could be informational messages that are not critical. Maybe add a link for <a class="link">more information</a>.</p>
+        </div>
+        <div role="alert" class="alert yellow">
+          <p class="fa fa-lightbulb-o"> Yellow is usually used for issues that do not require immediate action.</p>
+        </div>
+        <div role="alert" class="alert red">
+          <p class="fa fa-exclamation-triangle"> Red can be the most 'serious' of alerts.</p>
+        </div>
         <section class="container bg dark">
           <div role="alert" class="alert white">Neutral info. Like something about how about cookies are used for your website...</div>
         </section>
@@ -113,19 +126,19 @@
       <h2>Forms</h2>
       <section class="container">
         <div class="row">
-          <div class="col lg20">
+          <div class="col lg20 md50 sm100">
             <h3>Simple Input</h3>
             <p>
               <input>
             </p>
           </div>
-          <div class="col lg20">
+          <div class="col lg20 md50 sm100">
             <h3>Text area</h3>
             <p>
               <textarea></textarea>
             </p>
           </div>
-          <div class="col lg20">
+          <div class="col lg20 md50 sm100">
             <h3>Dropdowns</h3>
             <select>
               <option>Option 1</option>
@@ -138,34 +151,44 @@
         </div>
         <div class="row">
           <h3>Checkboxes</h3>
-          <div class="col lg20">
-            <input type="checkbox" id="chkbx1">
+          <div class="col lg20 sm50">
+            <input type="checkbox" id="chkbx1" class="checkbox">
             <label for="chkbx1">Simple Checkbox</label>
           </div>
-          <div class="col lg20">
+          <div class="col lg20 sm50">
             <input type="checkbox" id="chkbx2" checked aria-checked="true">
             <label for="chkbx2">Prechecked Box</label>
           </div>
-          <div class="col lg20">
+          <div class="col lg20 sm50">
             <input type="checkbox" id="chkbx3" class="slider">
             <label for="chkbx3">Slider checkbox</label>
           </div>
-          <div class="col lg20">
+          <div class="col lg20 sm50">
             <input type="checkbox" id="chkbx4" class="toggle">
             <label for="chkbx4">Toggle checkbox</label>
           </div>
         </div>
         <div class="row">
           <div class="col lg100">
-            <p>Remember to always associate labels with their inputs using <code>for="checkboxIdName"</code></p>
+            <p>Remember to always associate labels with their inputs using <code>for="checkboxId"</code></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col lg100">
+            <h3>Radio buttons</h3>
+            <label for="radio1" class="radio">
+              <input id="radio1" type="radio"><span tabindex="0">Radio button 1</span>
+            </label>
+            <h4>React component test</h4>
+            <div id="reactRadio1"></div>
           </div>
         </div>
       </section>
       <h2>Tables</h2>
       <section class="container grid">
         <div class="row">
-          <div class="col lg33 sm100">
-            <table class="table">
+          <div class="col lg25 md50">
+            <table class="table fullwidth">
               <thead>
                 <tr>
                   <th>Standard table</th>
@@ -193,8 +216,8 @@
               </tbody>
             </table>
           </div>
-          <div class="col lg33 sm100">
-            <table class="striped table">
+          <div class="col lg25 md50">
+            <table class="striped fullwidth table">
               <thead>
                 <tr>
                   <th>Striped table</th>
@@ -222,11 +245,40 @@
               </tbody>
             </table>
           </div>
-          <div class="col lg33">
-            <table class="table">
+          <div class="col lg25 md50">
+            <table class="table fullwidth hover">
               <thead>
                 <tr>
-                  <th>Standard table</th>
+                  <th>Hover table</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Row 1</td>
+                </tr>
+                <tr>
+                  <td>Row 2</td>
+                </tr>
+                <tr>
+                  <td>Row 3</td>
+                </tr>
+                <tr>
+                  <td>Row 4</td>
+                </tr>
+                <tr>
+                  <td>Row 5</td>
+                </tr>
+                <tr>
+                  <td>Row 6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col lg25 md50">
+            <table class="table fullwidth border">
+              <thead>
+                <tr>
+                  <th>Border table</th>
                 </tr>
               </thead>
               <tbody>
@@ -314,12 +366,21 @@
           </li>
         </ul>
       </section>
+      <h2>Grid test
+        <div class="row padded">
+          <div class="col md30">md30</div>
+          <div class="col md20">md20</div>
+          <div class="col md10">md10</div>
+        </div>
+      </h2>
     </main>
+    <div id="app"></div>
     <footer class="grid padded">
       <div class="row">
         <p class="text-right text-muted">&copy; | 2016</p>
       </div>
     </footer>
+    <script src="index.js" type="text/jsx"></script>
     <script src="dist/js/newb.js"></script>
   </body>
 </html>

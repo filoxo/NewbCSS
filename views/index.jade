@@ -2,9 +2,10 @@ doctype html
 html(lang="en")
   head
     title="NewbCSS"
+    meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="dist/css/newb.css")
-  body.page
+  body.page.responsive-text
     main
       h1 Welcome to NewbCSS
       p Intro and description
@@ -44,38 +45,40 @@ html(lang="en")
         button.btn.dark.orange ORANGE
         button.btn.dark.yellow YELLOW
         button.btn.dark.pink PINK
-      section.container
-        h3 #[code .solid.btn]s
-        button.btn.solid.upper default
-        button.btn.solid.blue.upper blue
-        button.btn.solid.red.upper red
-        button.btn.solid.green.upper green
-      section.container
-        h3 #[code .round.btn]s
-        button.btn.round ROUND
-        a(href="#").btn.round.blue ROUND BLUE ANCHOR
-      section.container
-        h3 #[code .btn] sizes
-        button.btn.sm .btn.sm
-        button.btn DEFAULT
-        button.btn.lg .btn.lg
-        button.btn.xlg .btn.xlg
-        p.
-          Looking for a smaller button? That might be too small to be tapable...
-          But if you're just going for the look, check out #[a(href="#badge") Badges].
+      section
+        .row
+          .col.lg30.sm100
+            .container
+              h3 #[code .solid.btn]s
+              button.btn.solid.upper default
+              button.btn.solid.blue.upper blue
+              button.btn.solid.red.upper red
+              button.btn.solid.green.upper green
+          .col.lg30.sm100
+            .container
+              h3 #[code .round.btn]s
+              button.btn.round ROUND
+              a(href="#").btn.round.blue ROUND BLUE ANCHOR
+          .col.lg40.sm100
+            .container
+              h3 #[code .btn] sizes
+              button.btn.sm .btn.sm
+              button.btn DEFAULT
+              button.btn.lg .btn.lg
+              button.btn.xlg .btn.xlg
       h2#links Links
       section.container
         p: a(href="#") Anchor
         button.link Button as a link
-        p Links inside text will be #[a.link underlined] so that they sound out.
+        p Links inside text will be #[a.link underlined] so that they stand out.
       h2#alerts Alerts
       section.container
-        h3 #[code .alert]s
+        h3 Basic #[code .alert]s
         .alert(role="alert") They are transparent by default.
-        .alert.green(role="alert") They should be used to provide information. Green may or may not be equated with success messages.
-        .alert.blue(role="alert"): p Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
-        .alert.yellow(role="alert") Yellow is usually used for issues that do not require immediate action.
-        .alert.red(role="alert") Red can be the most 'serious' of alerts.
+        .alert.green(role="alert"): p.fa.fa-check  They should be used to provide information. Green may or may not be equated with success messages.
+        .alert.blue(role="alert"): p.fa.fa-signal  Blue could be informational messages that are not critical. Maybe add a link for #[a.link more information].
+        .alert.yellow(role="alert"): p.fa.fa-lightbulb-o  Yellow is usually used for issues that do not require immediate action.
+        .alert.red(role="alert"): p.fa.fa-exclamation-triangle  Red can be the most 'serious' of alerts.
         section.container.bg.dark
           .alert.white(role="alert") Neutral info. Like something about how about cookies are used for your website...
         h3 #[code .solid.alert]
@@ -101,13 +104,13 @@ html(lang="en")
       h2 Forms
       section.container
         .row
-          .col.lg20
+          .col.lg20.md50.sm100
             h3 Simple Input
             p: input
-          .col.lg20
+          .col.lg20.md50.sm100
             h3 Text area
             p: textarea
-          .col.lg20
+          .col.lg20.md50.sm100
             h3 Dropdowns
             select
               option Option 1
@@ -117,27 +120,35 @@ html(lang="en")
               option Option 5
         .row
           h3 Checkboxes
-          .col.lg20
-           input(type="checkbox", id="chkbx1")
+          .col.lg20.sm50
+           input(type="checkbox", id="chkbx1").checkbox
            label(for="chkbx1") Simple Checkbox
-          .col.lg20
+          .col.lg20.sm50
            input(type="checkbox", id="chkbx2", checked, aria-checked="true")
            label(for="chkbx2") Prechecked Box
-          .col.lg20
+          .col.lg20.sm50
            input.slider(type="checkbox", id="chkbx3")
            label(for="chkbx3") Slider checkbox
 
-          .col.lg20
+          .col.lg20.sm50
            input.toggle(type="checkbox", id="chkbx4")
            label(for="chkbx4") Toggle checkbox
-         .row
-           .col.lg100
-             p Remember to always associate labels with their inputs using #[code for="checkboxIdName"]
+        .row
+          .col.lg100
+            p Remember to always associate labels with their inputs using #[code for="checkboxId"]
+        .row
+          .col.lg100
+            h3 Radio buttons
+            label.radio(for="radio1")
+              input#radio1(type="radio")
+              span(tabindex="0") Radio button 1
+            h4 React component test
+            #reactRadio1
       h2 Tables
       section.container.grid
         .row
-          .col.lg33.sm100
-            table.table
+          .col.lg25.md50
+            table.table.fullwidth
               thead
                 tr: th Standard table
               tbody
@@ -147,8 +158,8 @@ html(lang="en")
                 tr: td Row 4
                 tr: td Row 5
                 tr: td Row 6
-          .col.lg33.sm100
-            table.striped.table
+          .col.lg25.md50
+            table.striped.fullwidth.table
               thead
                 tr: th Striped table
               tbody
@@ -158,10 +169,21 @@ html(lang="en")
                 tr: td Row 4
                 tr: td Row 5
                 tr: td Row 6
-          .col.lg33
-            table.table
+          .col.lg25.md50
+            table.table.fullwidth.hover
               thead
-                tr: th Standard table
+                tr: th Hover table
+              tbody
+                tr: td Row 1
+                tr: td Row 2
+                tr: td Row 3
+                tr: td Row 4
+                tr: td Row 5
+                tr: td Row 6
+          .col.lg25.md50
+            table.table.fullwidth.border
+              thead
+                tr: th Border table
               tbody
                 tr: td Row 1
                 tr: td Row 2
@@ -220,7 +242,14 @@ html(lang="en")
               li modals
               li tabs
               li autogrow textarea
+      h2 Grid test
+        .row.padded
+          .col.md30 md30
+          .col.md20 md20
+          .col.md10 md10
+    #app
     footer.grid.padded
       .row
         p.text-right.text-muted &copy; | 2016
+    script(src='index.js', type="text/jsx")
     script(src='dist/js/newb.js')
