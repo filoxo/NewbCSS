@@ -30,13 +30,14 @@
   display:inline-block;
   margin:3px;
   padding:6px;
+  text-align:center;
   transition:background-color $btn-transition,color $btn-transition,border-color $btn-transition;
   @include button($base);
 
   // Button sizes
   &.sm {
     padding:2px;
-    font-size: .8em;
+    font-size:0.8em;
   }
   &.lg {
     padding:10px;
@@ -44,7 +45,7 @@
   }
   &.xlg {
     padding:14px;
-    font-size: 1.5em;
+    font-size:1.5em;
   }
   // Button round
   &.round {
