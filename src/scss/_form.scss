@@ -4,7 +4,7 @@
 }
 
 // All things forms
-input, textarea, select {
+input, textarea, select{
   border:1.5px solid $base;
   border-radius:$border-radius;
   padding:5px;
@@ -13,13 +13,22 @@ input, textarea, select {
 
 // Checkboxes
 input[type="checkbox"] + label,
-label + input[type="checkbox"] {
-  margin-left:7px; }
+label + input[type="checkbox"] { margin-left:7px; }
+
+// Custom checkboxes
+input[type="checkbox"].checkbox{
+  &:before {
+    content:"\f096";
+    font-family:FontAwesome;
+    width: 1.28571429em;
+  }
+  &:checked:before { content:"\f046"; }
+}
 
 // These are the minimum sizes to simply cover up the checkbox
 $slider-track-width:34px;
 $slider-track-height:12px;
-$slider-handle-size:$slider-track-width/2;
+$slider-handle-size:($slider-track-width+2)/2;
 //Slider checkbox
 input[type=checkbox].slider {
   border-radius:$slider-track-height/2;
@@ -64,7 +73,6 @@ input[type=checkbox].toggle {
   outline:none;
   position:relative;
   width:$slider-track-width;
-
   &::before, &::after{
     content: '';
     display:block;
@@ -75,7 +83,7 @@ input[type=checkbox].toggle {
 $toggle-handle-size:16px; // Minimum size
 $toggle-spacing:3px;
 $toggle-track-height:$toggle-handle-size + $toggle-spacing*2;
-$toggle-track-width:40px;
+$toggle-track-width:$toggle-handle-size*2 + $toggle-spacing*2;
 
 input[type=checkbox].toggle {
   border-radius:$toggle-track-height/2;
@@ -98,13 +106,45 @@ input[type=checkbox].toggle::after {
   height:$toggle-handle-size;
   left:$toggle-spacing;
   top:-($toggle-handle-size/2)+($toggle-track-height/2) ;
-
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
   position: absolute;
-
   width:$toggle-handle-size; }
 input[type=checkbox].toggle:checked::after {
-  left:($toggle-track-width - $toggle-spacing)/2; }
+  left:$toggle-track-width/2; }
+
+//Radio buttons
+[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+label.radio {
+  @extend %outline;
+}
+
+[type="radio"] + span::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.125em solid #fff;
+  box-shadow: 0 0 0 0.15em #000;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+  @extend %outline;
+}
+
+[type="radio"]:checked + span::before {
+  background: green;
+  box-shadow: 0 0 0 0.25em #000;
+}
