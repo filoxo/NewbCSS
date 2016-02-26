@@ -36,9 +36,10 @@
   }
   & > .close {
     color:inherit;
+    cursor:pointer;
     float:right;
-    right:5px;
-    top:5px;
+    right:1px;
+    top:3px;
     position:absolute;
   }
 }
@@ -46,4 +47,8 @@
 .hide {
   visibility:hidden;
   opacity:0;
+}
+
+.alert.dismissable { 
+  padding-top: 20px; 
 }
