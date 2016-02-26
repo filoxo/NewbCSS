@@ -4,7 +4,8 @@
   "description": "An attempt to create an extremely lightweight but flexible CSS framework. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
   },
   "author": "Carlos Filoteo",
   "license": "MIT",
@@ -16,10 +17,13 @@
     "gulp-babel": "^6.1.1",
     "gulp-jade": "^1.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
     "jade": "^1.11.0",
     "node-sass": "^3.4.2"
   },
   "dependencies": {
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   }
 }
